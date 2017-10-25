@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        
+    </body>
+    <script src='http://cdn.bootcss.com/jquery/3.2.1/jquery.js'></script>
+    <script>
+        $(function(){
+            $.ajax({
+                url:"http://localhost:3000/wwh",
+                type:"POST",
+                data:{abc:1},
+                success:function(e){
+                    console.log(e)
+                    for(var i=0;i<e.length;i++){
+                        $('body').append('<p>'+e[i]+'</p>')
+                    }
+                    
+                    }
+                })
+            })
+    </script>
+</html>
